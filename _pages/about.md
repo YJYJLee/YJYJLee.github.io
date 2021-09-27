@@ -2,15 +2,14 @@
 layout: about
 title: About
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: <a href="#">Affiliations</a>. Computer Science and Engineering, Seoul National University
 
 profile:
   align: right
   image: yj.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    Email <a href="mailto:yejinlee@snu.ac.kr"><i class="fas fa-envelope""></i></a><br>
+    Curriculum Vitae <a href="https://yjyjlee.github.io/assets/pdf/YJ_CV.pdf"><i class="ai ai-cv"></i></a>
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
