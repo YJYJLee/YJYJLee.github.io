@@ -67,8 +67,8 @@
   compressed inverted index at a high throughput. In addition, IIU provides flexible
   interconnects between modules to take advantage of both intra- and inter-query parallelism.
   Our evaluation using a cycle-level simulator demonstrates that IIU provides an average
-  of 13.8times\texttimes{} query latency reduction and 5.4times\texttimes{} throughput improvement across
-  different query types, while reducing the average energy consumption by 18.6times\texttimes{},
+  of 13.8X query latency reduction and 5.4X throughput improvement across
+  different query types, while reducing the average energy consumption by 18.6X,
   compared to Apache Lucene, a production-grade full-text search framework.},
   booktitle = {Proceedings of the Twenty-Fifth International Conference on Architectural Support for Programming Languages and Operating Systems},
   pages = {1233–1245},
@@ -150,13 +150,15 @@
   partial aggregation of correlated embeddings and retrieving the memoized partial result
   at a low cost. MERCI substantially reduces the number of memory accesses by 44% (29%),
   leading to 102% (74%) throughput improvement on real machines and 40.2% (28.6%) energy
-  savings at the expense of 8\texttimes{}(1\texttimes{}) additional memory usage.},
+  savings at the expense of 8x(1x) additional memory usage.},
   booktitle = {Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems},
   pages = {302–313},
   numpages = {12},
   keywords = {Embedding Lookup, Recommender Systems, Memoization},
   location = {Virtual, USA},
-  series = {ASPLOS 2021}
+  series = {ASPLOS 2021},
+  slides = {https://snu-arc.github.io/pubs/asplos21_merci-talk.pdf},
+  talk = {https://www.youtube.com/watch?v=5xRIuoPU60M}
 }
 
 @INPROCEEDINGS{elsa,
@@ -170,8 +172,12 @@
   year={2021},
   volume={},
   number={},
+  abstract = {The self-attention mechanism is rapidly emerging as one of the most important key primitives in neural networks (NNs) for its ability to identify the relations within input entities. The self-attention-oriented NN models such as Google Transformer and its variants have established the stateof-the-art on a very wide range of natural language processing tasks, and many other self-attention-oriented models are achieving competitive results in computer vision and recommender systems as well. Unfortunately, despite its great benefits, the self-attention mechanism is an expensive operation whose cost increases quadratically with the number of input entities that it processes, and thus accounts for a significant portion of the inference runtime. Thus, this paper presents ELSA (Efficient, Lightweight Self-Attention), a hardware-software co-designed solution to substantially reduce the runtime as well as energy spent on the self-attention mechanism. Specifically, based on the intuition that not all relations are equal, we devise a novel approximation scheme that significantly reduces the amount of computation by efficiently filtering out relations that are unlikely to affect the final output. With the specialized hardware for this approximate self-attention mechanism, ELSA achieves a geomean speedup of 58.1× as well as over three orders of magnitude improvements in energy efficiency compared to GPU on selfattention computation in modern NN models while maintaining less than 1% loss in the accuracy metric.},
   pages={692-705},
-  doi={10.1109/ISCA52012.2021.00060}}
+  doi={10.1109/ISCA52012.2021.00060},
+  slides={https://snu-arc.github.io/pubs/isca21_elsa-talk.pdf},
+  talk = {https://www.youtube.com/watch?v=JDH_HeTsECM}
+  }
 
 @ARTICLE{genomics,
   author={Ham, Tae Jun and Lee, Yejin and Seo, Seong Hoon and Song, U Gyeong and Lee, Jae W. and Bruns-Smith, David and Sweeney, Brendan and Asanovic, Krste and Oh, Young H. and Wills, Lisa Wu},
