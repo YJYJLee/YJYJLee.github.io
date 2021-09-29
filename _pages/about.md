@@ -6,8 +6,8 @@ description: <a href="#">Affiliations</a>. Computer Science and Engineering, Seo
 
 profile:
   align: right
-  # image: yj.jpg
-  imgae: prof_pic.jpg
+  image: yj.jpg
+  # imgae: prof_pic.jpg
   address: >
     Email <a href="mailto:yejinlee@snu.ac.kr"><i class="fas fa-envelope""></i></a><br>
     Curriculum Vitae <a href="https://yjyjlee.github.io/assets/pdf/YJ_CV.pdf"><i class="ai ai-cv"></i></a>
