@@ -1,81 +1,77 @@
 ---
 ---
 
-@inproceedings{charon,
-  abbr={MICRO},
+
+@ARTICLE{genomics,
+  abbr={IEEE Micro},
   bibtex_show={true},
   selected={true},
-  pdf={https://snu-arc.github.io/pubs/micro19_charon.pdf},
-  author = {Jang, Jaeyoung and Heo, Jun and Lee, Yejin and Won, Jaeyeon and Kim, Seonghak and Jung, Sung Jun and Jang, Hakbeom and Ham, Tae Jun and Lee, Jae W.},
-  title = {Charon: Specialized Near-Memory Processing Architecture for Clearing Dead Objects in Memory},
-  year = {2019},
-  isbn = {9781450369381},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  url = {https://doi.org/10.1145/3352460.3358297},
-  doi = {10.1145/3352460.3358297},
-  abstract = {Garbage collection (GC) is a standard feature for high productivity programming, saving
-  a programmer from many nasty memory-related bugs. However, these productivity benefits
-  come with a cost in terms of application throughput, worst-case latency, and energy
-  consumption. Since the first introduction of GC by the Lisp programming language in
-  the 1950s, a myriad of hardware and software techniques have been proposed to reduce
-  this cost. While the idea of accelerating GC in hardware is appealing, its impact
-  has been very limited due to narrow coverage, lack of flexibility, intrusive system
-  changes, and significant hardware cost. Even with specialized hardware GC performance
-  is eventually limited by memory bandwidth bottleneck. Fortunately, emerging 3D stacked
-  DRAM technologies shed new light on this decades-old problem by enabling efficient
-  near-memory processing with ample memory bandwidth. Thus, we propose Charon1, the
-  first 3D stacked memory-based GC accelerator. Through a detailed performance analysis
-  of HotSpot JVM, we derive a set of key algorithmic primitives based on their GC time
-  coverage and implementation complexity in hardware. Then we devise a specialized processing
-  unit to substantially improve their memory-level parallelism and throughput with a
-  low hardware cost. Our evaluation of Charon with the full-production HotSpot JVM running
-  two big data analytics frameworks, Spark and GraphChi, demonstrates a 3.29\texttimes{} geomean
-  speedup and 60.7% energy savings for GC over the baseline 8-core out-of-order processor.},
-  booktitle = {Proceedings of the 52nd Annual IEEE/ACM International Symposium on Microarchitecture},
-  pages = {726–739},
-  numpages = {14},
-  keywords = {Garbage collection, Java Virtual Machine, Domain-specific architecture, Memory management, Near-memory processing},
-  location = {Columbus, OH, USA},
-  series = {MICRO '52},
+  pdf={genesis_journal.pdf},
+  author={Ham, Tae Jun and Bruns-Smith, David and Sweeney, Brendan and Lee, Yejin and Seo, Seong Hoon and Song, U Gyeong and Oh, Young H. and Asanovic, Krste and Lee, Jae W. and Wills, Lisa Wu},
+  journal={IEEE Micro}, 
+  title={Accelerating Genomic Data Analytics With Composable Hardware Acceleration Framework},
+  abstract={This article presents a framework, Genesis (genome analysis), to efficiently and flexibly accelerate generic data manipulation operations that have become performance bottlenecks in the genomic data processing pipeline utilizing FPGAsas-a-service. Genesis conceptualizes genomic data as a very large relational database and uses extended SQL as a domain-specific language to construct data manipulation queries. To accelerate the queries, we designed a Genesis hardware library of efficient coarse-grained primitives that can be composed into a specialized dataflow architecture. This approach explores a systematic and scalable methodology to expedite domain-specific end-to-end accelerated system development and deployment.},
+  year={2021},
+  volume={41},
+  number={3},
+  pages={42-49},
+  doi={10.1109/MM.2021.3072385}
 }
 
-@inproceedings{iiu,
+@INPROCEEDINGS{elsa,
+  abbr={ISCA},
+  bibtex_show={true},
+  selected={true},
+  pdf={https://snu-arc.github.io/pubs/isca21_elsa.pdf},
+  author={Ham, *Tae Jun and Lee, *Yejin and Seo, Seong Hoon and Kim, Soosung and Choi, Hyunji and Jung, Sung Jun and Lee, Jae W.},
+  booktitle={Proceedings of the ACM/IEEE 48th Annual International Symposium on Computer Architecture (ISCA)}, 
+  title={ELSA: Hardware-Software Co-design for Efficient, Lightweight Self-Attention Mechanism in Neural Networks}, 
+  year={2021},
+  volume={},
+  number={},
+  abstract = {The self-attention mechanism is rapidly emerging as one of the most important key primitives in neural networks (NNs) for its ability to identify the relations within input entities. The self-attention-oriented NN models such as Google Transformer and its variants have established the stateof-the-art on a very wide range of natural language processing tasks, and many other self-attention-oriented models are achieving competitive results in computer vision and recommender systems as well. Unfortunately, despite its great benefits, the self-attention mechanism is an expensive operation whose cost increases quadratically with the number of input entities that it processes, and thus accounts for a significant portion of the inference runtime. Thus, this paper presents ELSA (Efficient, Lightweight Self-Attention), a hardware-software co-designed solution to substantially reduce the runtime as well as energy spent on the self-attention mechanism. Specifically, based on the intuition that not all relations are equal, we devise a novel approximation scheme that significantly reduces the amount of computation by efficiently filtering out relations that are unlikely to affect the final output. With the specialized hardware for this approximate self-attention mechanism, ELSA achieves a geomean speedup of 58.1× as well as over three orders of magnitude improvements in energy efficiency compared to GPU on selfattention computation in modern NN models while maintaining less than 1% loss in the accuracy metric.},
+  pages={692-705},
+  doi={10.1109/ISCA52012.2021.00060},
+  slides={https://snu-arc.github.io/pubs/isca21_elsa-talk.pdf},
+  talk = {https://www.youtube.com/watch?v=JDH_HeTsECM},
+  cofirst = {true}
+}
+
+@inproceedings{merci,
   abbr={ASPLOS},
   bibtex_show={true},
   selected={true},
-  pdf={https://snu-arc.github.io/pubs/asplos20_iiu.pdf},
-  author = {Heo, Jun and Won, Jaeyeon and Lee, Yejin and Bharuka, Shivam and Jang, Jaeyoung and Ham, Tae Jun and Lee, Jae W.},
-  title = {IIU: Specialized Architecture for Inverted Index Search},
-  year = {2020},
-  isbn = {9781450371025},
+  pdf={https://snu-arc.github.io/pubs/asplos21_merci.pdf},
+  author = {Lee, Yejin and Seo, Seong Hoon and Choi, Hyunji and Sul, Hyoung Uk and Kim, Soosung and Lee, Jae W. and Ham, Tae Jun},
+  title = {MERCI: Efficient Embedding Reduction on Commodity Hardware via Sub-Query Memoization},
+  year = {2021},
+  isbn = {9781450383172},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
-  url = {https://doi.org/10.1145/3373376.3378521},
-  doi = {10.1145/3373376.3378521},
-  abstract = {Inverted index serves as a fundamental data structure for efficient search across
-  various applications such as full-text search engine, document analytics and other
-  information retrieval systems. The storage requirement and query load for these structures
-  have been growing at a rapid rate. Thus, an ideal indexing system should maintain
-  a small index size with a low query processing time. Previous works have mainly focused
-  on using CPUs and GPUs to exploit query parallelism while utilizing state-of-the-art
-  compression schemes to fit the index in memory. However, scaling parallelism to maximally
-  utilize memory bandwidth on these architectures is still challenging. In this work,
-  we present IIU, a novel inverted index processing unit, to optimize the query performance
-  while maintaining a low memory overhead for index storage. To this end, we co-design
-  the indexing scheme and hardware accelerator so that the accelerator can process highly
-  compressed inverted index at a high throughput. In addition, IIU provides flexible
-  interconnects between modules to take advantage of both intra- and inter-query parallelism.
-  Our evaluation using a cycle-level simulator demonstrates that IIU provides an average
-  of 13.8X query latency reduction and 5.4X throughput improvement across
-  different query types, while reducing the average energy consumption by 18.6X,
-  compared to Apache Lucene, a production-grade full-text search framework.},
-  booktitle = {Proceedings of the Twenty-Fifth International Conference on Architectural Support for Programming Languages and Operating Systems},
-  pages = {1233–1245},
-  numpages = {13},
-  keywords = {accelerator, hardware/software co-design, inverted index, domain-specific architecture, full-text search},
-  location = {Lausanne, Switzerland},
-  series = {ASPLOS '20}
+  url = {https://doi.org/10.1145/3445814.3446717},
+  doi = {10.1145/3445814.3446717},
+  abstract = {Deep neural networks (DNNs) with embedding layers are widely adopted to capture complex
+  relationships among entities within a dataset. Embedding layers aggregate multiple
+  embeddings — a dense vector used to represent the complicated nature of a data feature—
+  into a single embedding; such operation is called embedding reduction. Embedding reduction
+  spends a significant portion of its runtime on reading embeddings from memory and
+  thus is known to be heavily memory-bandwidth-bound. Recent works attempt to accelerate
+  this critical operation, but they often require either hardware modifications or emerging
+  memory technologies, which makes it hardly deployable on commodity hardware. Thus,
+  we propose MERCI, Memoization for Embedding Reduction with ClusterIng, a novel memoization
+  framework for efficient embedding reduction. MERCI provides a mechanism for memoizing
+  partial aggregation of correlated embeddings and retrieving the memoized partial result
+  at a low cost. MERCI substantially reduces the number of memory accesses by 44% (29%),
+  leading to 102% (74%) throughput improvement on real machines and 40.2% (28.6%) energy
+  savings at the expense of 8x(1x) additional memory usage.},
+  booktitle = {Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)},
+  pages = {302–313},
+  numpages = {12},
+  keywords = {Embedding Lookup, Recommender Systems, Memoization},
+  location = {Virtual, USA},
+  series = {ASPLOS 2021},
+  slides = {https://snu-arc.github.io/pubs/asplos21_merci-talk.pdf},
+  talk = {https://www.youtube.com/watch?v=5xRIuoPU60M}
 }
 
 @inproceedings{genesis,
@@ -116,7 +112,7 @@
   mapping of such interface to primitive hardware modules as we have demonstrated here,
   it will expedite the acceleration of domain-specific algorithms and allow the easy
   adaptation of algorithm changes.},
-  booktitle = {Proceedings of the ACM/IEEE 47th Annual International Symposium on Computer Architecture},
+  booktitle = {Proceedings of the ACM/IEEE 47th Annual International Symposium on Computer Architecture (ISCA)},
   pages = {254–267},
   numpages = {14},
   keywords = {FPGA, genomic data analysis, hardware accelerator, genome sequencing, SQL},
@@ -124,68 +120,117 @@
   series = {ISCA '20}
 }
 
-@inproceedings{merci,
+@inproceedings{iiu,
   abbr={ASPLOS},
   bibtex_show={true},
   selected={true},
-  pdf={https://snu-arc.github.io/pubs/asplos21_merci.pdf},
-  author = {Lee, Yejin and Seo, Seong Hoon and Choi, Hyunji and Sul, Hyoung Uk and Kim, Soosung and Lee, Jae W. and Ham, Tae Jun},
-  title = {MERCI: Efficient Embedding Reduction on Commodity Hardware via Sub-Query Memoization},
-  year = {2021},
-  isbn = {9781450383172},
+  pdf={https://snu-arc.github.io/pubs/asplos20_iiu.pdf},
+  author = {Heo, Jun and Won, Jaeyeon and Lee, Yejin and Bharuka, Shivam and Jang, Jaeyoung and Ham, Tae Jun and Lee, Jae W.},
+  title = {IIU: Specialized Architecture for Inverted Index Search},
+  year = {2020},
+  isbn = {9781450371025},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
-  url = {https://doi.org/10.1145/3445814.3446717},
-  doi = {10.1145/3445814.3446717},
-  abstract = {Deep neural networks (DNNs) with embedding layers are widely adopted to capture complex
-  relationships among entities within a dataset. Embedding layers aggregate multiple
-  embeddings — a dense vector used to represent the complicated nature of a data feature—
-  into a single embedding; such operation is called embedding reduction. Embedding reduction
-  spends a significant portion of its runtime on reading embeddings from memory and
-  thus is known to be heavily memory-bandwidth-bound. Recent works attempt to accelerate
-  this critical operation, but they often require either hardware modifications or emerging
-  memory technologies, which makes it hardly deployable on commodity hardware. Thus,
-  we propose MERCI, Memoization for Embedding Reduction with ClusterIng, a novel memoization
-  framework for efficient embedding reduction. MERCI provides a mechanism for memoizing
-  partial aggregation of correlated embeddings and retrieving the memoized partial result
-  at a low cost. MERCI substantially reduces the number of memory accesses by 44% (29%),
-  leading to 102% (74%) throughput improvement on real machines and 40.2% (28.6%) energy
-  savings at the expense of 8x(1x) additional memory usage.},
-  booktitle = {Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems},
-  pages = {302–313},
-  numpages = {12},
-  keywords = {Embedding Lookup, Recommender Systems, Memoization},
-  location = {Virtual, USA},
-  series = {ASPLOS 2021},
-  slides = {https://snu-arc.github.io/pubs/asplos21_merci-talk.pdf},
-  talk = {https://www.youtube.com/watch?v=5xRIuoPU60M}
+  url = {https://doi.org/10.1145/3373376.3378521},
+  doi = {10.1145/3373376.3378521},
+  abstract = {Inverted index serves as a fundamental data structure for efficient search across
+  various applications such as full-text search engine, document analytics and other
+  information retrieval systems. The storage requirement and query load for these structures
+  have been growing at a rapid rate. Thus, an ideal indexing system should maintain
+  a small index size with a low query processing time. Previous works have mainly focused
+  on using CPUs and GPUs to exploit query parallelism while utilizing state-of-the-art
+  compression schemes to fit the index in memory. However, scaling parallelism to maximally
+  utilize memory bandwidth on these architectures is still challenging. In this work,
+  we present IIU, a novel inverted index processing unit, to optimize the query performance
+  while maintaining a low memory overhead for index storage. To this end, we co-design
+  the indexing scheme and hardware accelerator so that the accelerator can process highly
+  compressed inverted index at a high throughput. In addition, IIU provides flexible
+  interconnects between modules to take advantage of both intra- and inter-query parallelism.
+  Our evaluation using a cycle-level simulator demonstrates that IIU provides an average
+  of 13.8X query latency reduction and 5.4X throughput improvement across
+  different query types, while reducing the average energy consumption by 18.6X,
+  compared to Apache Lucene, a production-grade full-text search framework.},
+  booktitle = {Proceedings of the 25th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)},
+  pages = {1233–1245},
+  numpages = {13},
+  keywords = {accelerator, hardware/software co-design, inverted index, domain-specific architecture, full-text search},
+  location = {Lausanne, Switzerland},
+  series = {ASPLOS '20}
 }
 
-@INPROCEEDINGS{elsa,
-  abbr={ISCA},
+@inproceedings{charon,
+  abbr={MICRO},
   bibtex_show={true},
   selected={true},
-  pdf={https://snu-arc.github.io/pubs/isca21_elsa.pdf},
-  author={Ham, Tae Jun and Lee, Yejin and Seo, Seong Hoon and Kim, Soosung and Choi, Hyunji and Jung, Sung Jun and Lee, Jae W.},
-  booktitle={2021 ACM/IEEE 48th Annual International Symposium on Computer Architecture (ISCA)}, 
-  title={ELSA: Hardware-Software Co-design for Efficient, Lightweight Self-Attention Mechanism in Neural Networks}, 
-  year={2021},
-  volume={},
-  number={},
-  abstract = {The self-attention mechanism is rapidly emerging as one of the most important key primitives in neural networks (NNs) for its ability to identify the relations within input entities. The self-attention-oriented NN models such as Google Transformer and its variants have established the stateof-the-art on a very wide range of natural language processing tasks, and many other self-attention-oriented models are achieving competitive results in computer vision and recommender systems as well. Unfortunately, despite its great benefits, the self-attention mechanism is an expensive operation whose cost increases quadratically with the number of input entities that it processes, and thus accounts for a significant portion of the inference runtime. Thus, this paper presents ELSA (Efficient, Lightweight Self-Attention), a hardware-software co-designed solution to substantially reduce the runtime as well as energy spent on the self-attention mechanism. Specifically, based on the intuition that not all relations are equal, we devise a novel approximation scheme that significantly reduces the amount of computation by efficiently filtering out relations that are unlikely to affect the final output. With the specialized hardware for this approximate self-attention mechanism, ELSA achieves a geomean speedup of 58.1× as well as over three orders of magnitude improvements in energy efficiency compared to GPU on selfattention computation in modern NN models while maintaining less than 1% loss in the accuracy metric.},
-  pages={692-705},
-  doi={10.1109/ISCA52012.2021.00060},
-  slides={https://snu-arc.github.io/pubs/isca21_elsa-talk.pdf},
-  talk = {https://www.youtube.com/watch?v=JDH_HeTsECM}
-  }
+  pdf={https://snu-arc.github.io/pubs/micro19_charon.pdf},
+  author = {Jang, Jaeyoung and Heo, Jun and Lee, Yejin and Won, Jaeyeon and Kim, Seonghak and Jung, Sung Jun and Jang, Hakbeom and Ham, Tae Jun and Lee, Jae W.},
+  title = {Charon: Specialized Near-Memory Processing Architecture for Clearing Dead Objects in Memory},
+  year = {2019},
+  isbn = {9781450369381},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3352460.3358297},
+  doi = {10.1145/3352460.3358297},
+  abstract = {Garbage collection (GC) is a standard feature for high productivity programming, saving
+  a programmer from many nasty memory-related bugs. However, these productivity benefits
+  come with a cost in terms of application throughput, worst-case latency, and energy
+  consumption. Since the first introduction of GC by the Lisp programming language in
+  the 1950s, a myriad of hardware and software techniques have been proposed to reduce
+  this cost. While the idea of accelerating GC in hardware is appealing, its impact
+  has been very limited due to narrow coverage, lack of flexibility, intrusive system
+  changes, and significant hardware cost. Even with specialized hardware GC performance
+  is eventually limited by memory bandwidth bottleneck. Fortunately, emerging 3D stacked
+  DRAM technologies shed new light on this decades-old problem by enabling efficient
+  near-memory processing with ample memory bandwidth. Thus, we propose Charon1, the
+  first 3D stacked memory-based GC accelerator. Through a detailed performance analysis
+  of HotSpot JVM, we derive a set of key algorithmic primitives based on their GC time
+  coverage and implementation complexity in hardware. Then we devise a specialized processing
+  unit to substantially improve their memory-level parallelism and throughput with a
+  low hardware cost. Our evaluation of Charon with the full-production HotSpot JVM running
+  two big data analytics frameworks, Spark and GraphChi, demonstrates a 3.29\texttimes{} geomean
+  speedup and 60.7% energy savings for GC over the baseline 8-core out-of-order processor.},
+  booktitle = {Proceedings of the 52nd Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)},
+  pages = {726–739},
+  numpages = {14},
+  keywords = {Garbage collection, Java Virtual Machine, Domain-specific architecture, Memory management, Near-memory processing},
+  location = {Columbus, OH, USA},
+  series = {MICRO '52},
+}
 
-@ARTICLE{genomics,
-  author={Ham, Tae Jun and Lee, Yejin and Seo, Seong Hoon and Song, U Gyeong and Lee, Jae W. and Bruns-Smith, David and Sweeney, Brendan and Asanovic, Krste and Oh, Young H. and Wills, Lisa Wu},
-  journal={IEEE Micro}, 
-  title={Accelerating Genomic Data Analytics With Composable Hardware Acceleration Framework}, 
-  year={2021},
-  volume={41},
-  number={3},
-  pages={42-49},
-  doi={10.1109/MM.2021.3072385}
-  }
+@inproceedings{cc,
+  abbr={ITC-CSCC},
+  bibtex_show={true},
+  selected={true},
+  author = {Jang, Jaeyoung and Lee, Yejin and Lee, Jae W.},
+  title = {Performance Analysis of Convolutional Neural Networks on Manycore Platforms},
+  year = {2019},
+  booktitle = {The 34th International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC)}
+}
+
+@inproceedings{trends,
+  abbr={KCC},
+  bibtex_show={true},
+  selected={true},
+  author = {Lee, Yejin Lee and Heo, Jun and Jang, Jaeyoung and Lee, Jae W.},
+  title = {Trends in HW and SW based Memory Management for High-Performance Data Analysis},
+  year = {2018},
+  booktitle = {Proceedings of the Korean Information Science Society Conference}
+}
+
+@inproceedings{aa,
+  abbr={KCC},
+  bibtex_show={true},
+  selected={true},
+  author = {Jang, HeeWoong and Kim, Yong June and Lee, Yejin and Koo, Myoung-Wan},
+  title = {The development of a spoken lecture summary Application Software using TextRank on Android
+platform},
+  year = {2017},
+  booktitle = {Proceedings of the Korean Information Science Society Conference}
+}
+
+
+
+
+
+
+

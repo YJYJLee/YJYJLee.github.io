@@ -1,7 +1,10 @@
 ---
 layout: post
-date: 2016-01-15 07:59:00-0400
+date: 2020-11-19 15:59:00-0400
 inline: true
 ---
 
-A simple inline announcement with Markdown emoji! :sparkles: :smile:
+Paper accepted to ASPLOS 2021. 
+
+MERCI: Efficient Embedding Reduction on Commodity Hardware via
+Sub-Query Memoization

@@ -67,7 +67,7 @@ dblp_url: https://dblp.org/pid/185/6602-1.html # your DBLP profile url
 stackoverflow_id: #your stackoverflow id
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Feel free to contact me!
 
 google_analytics: UA-XXXXXXXXX # out your google-analytics code
 panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
@@ -101,7 +101,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-
+  honors:
+    output: true
+    permalink: /honors/:path/
 news_limit: 5
 
 # -----------------------------------------------------------------------------

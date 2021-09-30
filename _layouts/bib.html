@@ -20,8 +20,8 @@
       <div class="author">
         {% for author in entry.author_array %}
           {% assign author_is_self = false %}
-          {% if author.last == "Lee"%}
-            {% if author.first == "Yejin"%}
+          {% if author.last contains "Lee"%}
+            {% if author.first contains "Yejin"%}
               {% assign author_is_self = true %}
             {% endif %}
           {% endif %}
@@ -35,7 +35,11 @@
             {% endfor %}
           {% endif %}
           
-          {% if forloop.length == 1 %}
+<!--           {% if author.first contains '*' %}
+          <b>*</b>
+          {% endif %}
+          
+ -->          {% if forloop.length == 1 %}
             {% if author_is_self %}
               <em>{{author.first}} {{author.last}}</em>
             {% else %}
@@ -65,6 +69,9 @@
             {% endunless %}
           {% endif %}
         {% endfor %}
+        {% if entry.cofirst == "true" %}
+          <br><b>* These authors contributed equally to this work.</b>
+        {% endif %}
       </div>
 
       <div class="periodical">
