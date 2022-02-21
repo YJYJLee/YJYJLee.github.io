@@ -1,9 +1,6 @@
 ---
 layout: post
-year: 2021
+year: 2018
 inline: true
-title: Google PhD Fellowship Recipient
+title: Summa Cum Laude
 ---
-
-Recipient of Google PhD Fellowship Program that recognize and
-support outstanding PhD candidates who are doing exceptional and innovative research in computer science

@@ -3,7 +3,7 @@
   {% if site.honors  %}
     <div class="table-responsive">
       <table class="table table-sm table-borderless">
-      {% assign honors = site.honors %}
+      {% assign honors = site.honors | reverse %}
       {% for item in honors %}
         <tr>
           <!-- <th scope="row">{{ item.year | date: "%Y" }}</th> -->

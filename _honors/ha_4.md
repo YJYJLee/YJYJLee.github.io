@@ -1,6 +1,9 @@
 ---
 layout: post
-year: 2016, 2017
+year: 2021
 inline: true
-title: Academic Achievement Scholarship
+title: Google PhD Fellowship Recipient
 ---
+
+Recipient of Google PhD Fellowship Program that recognize and
+support outstanding PhD candidates who are doing exceptional and innovative research in computer science
