@@ -18,6 +18,8 @@ social: true  # includes social icons at the bottom of the page
 honors: true
 talks: true
 service: true
+patent: true
+opensource: true
 teaching: true
 ---
 

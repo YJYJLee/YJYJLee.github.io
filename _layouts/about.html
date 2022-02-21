@@ -45,6 +45,14 @@ layout: default
       {% include talks.html %}
     {% endif %}
 
+    {% if page.patent %}
+      {% include patent.html %}
+    {% endif %}
+
+    {% if page.opensource %}
+      {% include opensource.html %}
+    {% endif %}
+
     {% if page.service %}
       {% include service.html %}
     {% endif %}
