@@ -20,6 +20,7 @@ jobs:
       uses: actions/setup-ruby@v1
       with:
         ruby-version: '3.0'
+        node-version: '16'
     - name: Enable bundler cache
       uses: actions/cache@v2
       with:
